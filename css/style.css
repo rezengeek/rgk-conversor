@@ -91,6 +91,14 @@ body {
   /* Linha embaixo do item ativo */
 }
 
+.engine-title h1 {
+  font-size: 48px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
 .container {
   max-width: 1100px;
@@ -145,13 +153,4 @@ body {
 .profile-info a:active {
   color: white;
   /* Cor do texto enquanto o link é clicado */
-}
-
-.engine-title h1 {
-  font-size: 48px;
-  margin-top: 60px;
-  margin-bottom: 60px;
-  text-align: center;
-  color: #ffffff;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
