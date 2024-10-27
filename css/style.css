@@ -8,7 +8,7 @@
 }
 
 body {
-  background-color: #1b2838;
+  background-color: #0d1117;
   /*background-image: url('/img/background.png');*/
   background-size: cover;
   background-position: center;
@@ -20,7 +20,7 @@ body {
 }
 
 .navbar {
-  background-color: #101217;
+  background-color: #010409;
   height: 100px;
   /* Greater height */
   display: flex;
