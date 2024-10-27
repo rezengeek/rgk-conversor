@@ -1,0 +1,148 @@
+/* RGK CONVERSOR STYLES*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #1b2838;
+  background-image: url('/img/banner.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #c7d5e0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: #101217;
+  height: 100px;
+  /* Greater height */
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  border-bottom: 2px solid #214265;
+}
+
+.nav-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  height: 100px;
+  margin-left: 70px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 60px;
+  margin: 0;
+  padding: 0;
+  margin-right: 20px;
+}
+
+.nav-links li {
+  display: inline-block;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #c7d5e0;
+  font-size: 16px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #007bff;
+  /* Cor azul da linha */
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+  /* Cor azul do texto no hover para outros links */
+}
+
+.nav-links a.active {
+  color: #007bff;
+  /* Cor azul do texto para o item ativo */
+}
+
+.nav-links a.active::after {
+  width: 100%;
+  /* Linha embaixo do item ativo */
+}
+
+
+.container {
+  max-width: 1100px;
+  max-height: 1200px;
+  margin: 40px auto;
+  margin-bottom: 120px;
+  padding: 20px;
+  background-color: #101217;
+  border-radius: 20px;
+  border: 2px solid #214265;
+  /* Borda fina azul ao redor do container */
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.profile-info h3 {
+  margin-bottom: 5px;
+}
+
+.profile-info p {
+  color: #919A9C;
+  padding: 2px;
+}
+
+.profile-info a {
+  color: white;
+  /* Cor do texto do link */
+  text-decoration: none;
+  /* Remove o sublinhado */
+}
+
+.profile-info a:visited {
+  color: white;
+  /* Cor do texto após o clique */
+}
+
+.profile-info a:hover {
+  color: white;
+  /* Cor do texto ao passar o mouse */
+}
+
+.profile-info a:active {
+  color: white;
+  /* Cor do texto enquanto o link é clicado */
+}
