@@ -9,7 +9,7 @@
 
 body {
   background-color: #1b2838;
-  background-image: url('/img/background.png');
+  /*background-image: url('/img/background.png');*/
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -191,7 +191,7 @@ form input {
   background-color: #32353C;
   border: 1px solid #132941;
   color: #ffffff;
-  border-radius: 10px;
+  border-radius: 20px;
   transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
@@ -200,7 +200,7 @@ form input:focus {
   border-color: #007bff;
   /* Cor de foco */
   background-color: #32353C;
-  border-radius: 10px;
+  border-radius: 20px;
   /* Muda a cor de fundo para um tom mais claro */
 }
 
@@ -211,7 +211,7 @@ button {
   background-color: #1994FF;
   color: #ffffff;
   border: none;
-  border-radius: 5px;
+  border-radius: 20px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   font-weight: bold;
