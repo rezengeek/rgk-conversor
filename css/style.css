@@ -228,3 +228,84 @@ form input {
 button:hover {
   background-color: #00668c;
 }
+
+.error {
+  color: white;
+  background-color: red;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.loading {
+  display: none;
+  margin-top: 20px;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #0b72b9;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.footer {
+  background-color: #101217;
+  padding: 50px 20px;
+  /* Large footer */
+  color: #c7d5e0;
+  text-align: center;
+  border-top: 2px solid #214265;
+}
+
+.footer li {
+  margin-top: -20px;
+}
+
+.footer a {
+  color: #66c0f4;
+  text-decoration: none;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.copy p {
+  margin-top: 40px;
+  margin-bottom: -30px;
+  color: #737377;
+}
+
+.copy a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.copy strong {
+  color: #1994FF;
+}
+
+.copy img {
+  width: 30px;
+  height: 30px;
+  margin-bottom: -10px;
+}
+
+.no-underline {
+  text-decoration: none;
+}
