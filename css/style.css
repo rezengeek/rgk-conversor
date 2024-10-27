@@ -1,4 +1,4 @@
-/* RGK CONVERSOR STYLES*/
+/* RGK CONVERSOR ONLINE - ONLINE CONVERTER STYLES*/
 
 * {
   margin: 0;
@@ -153,4 +153,78 @@ body {
 .profile-info a:active {
   color: white;
   /* Cor do texto enquanto o link é clicado */
+}
+
+.text-container p {
+  margin-top: 30px;
+  font-size: 18px;
+  color: #D1D5DB;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.limit p {
+  text-align: center;
+}
+
+
+form {
+  margin-top: 20px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* Espaçamento entre os elementos do formulário */
+}
+
+form label {
+  font-weight: bold;
+  color: #007bff;
+  display: block;
+  margin: 10px 0 5px;
+}
+
+form select,
+form input {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #32353C;
+  border: 1px solid #132941;
+  color: #ffffff;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+form select:focus,
+form input:focus {
+  border-color: #007bff;
+  /* Cor de foco */
+  background-color: #32353C;
+  border-radius: 10px;
+  /* Muda a cor de fundo para um tom mais claro */
+}
+
+button {
+  width: 100%;
+  max-width: 30%;
+  padding: 10px;
+  background-color: #1994FF;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+form label,
+form select,
+form input {
+  width: 100%;
+  max-width: 60%;
+  /* Limita a largura dos inputs */
+}
+
+button:hover {
+  background-color: #00668c;
 }
