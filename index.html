@@ -16,6 +16,24 @@
 
 <body>
   <header>
+
+    <!-- Botão do Menu Hamburguer -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <!-- Menu Lateral -->
+    <div class="side-menu" id="side-menu">
+      <div class="close-btn" onclick="toggleMenu()">
+        <i class="fas fa-times"></i>
+      </div>
+      <ul>
+        <li><a href="index.html" class="active"><b>Início</b></a></li>
+        <li><a href="mp3-wav.html"><b>MP3 para WAV</b></a></li>
+        <li><a href="youtube-downloader.html"><b>YouTube Downloader</b></a></li>
+      </ul>
+    </div>
+
     <nav class="navbar">
       <div class="nav-content">
         <img src="/img/logo.png" alt="RezenGeek Logo" class="logo">

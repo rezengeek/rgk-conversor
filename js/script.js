@@ -1,5 +1,11 @@
 // RGK CONVERSOR ONLINE - ONLINE CONVERTER SCRIPT
 
+function toggleMenu() {
+  const menu = document.getElementById('side-menu');
+  menu.classList.toggle('active');
+} // Menu Hamburguer
+
+
 document.addEventListener('DOMContentLoaded', function () {
   // Atualiza as opções de qualidade com base nos formatos selecionados
   document.getElementById('input-format').addEventListener('change', updateQualityOptions);

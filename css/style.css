@@ -309,3 +309,118 @@ button:hover {
 .no-underline {
   text-decoration: none;
 }
+
+@media (max-width: 768px) {
+  .profile {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  form label,
+  form select,
+  form input {
+    font-size: 16px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .container {
+    padding: 15px;
+    /* Reduz o espaçamento para telas menores */
+  }
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 30px;
+  color: #c7d5e0;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  /* Oculta o menu fora da tela à direita */
+  width: 250px;
+  height: 100%;
+  background-color: #101217;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  /* Sombra do lado direito */
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+.side-menu ul {
+  list-style: none;
+  padding: 20px;
+}
+
+.side-menu a {
+  color: #c7d5e0;
+  /* Cor padrão dos links */
+  text-decoration: none;
+  /* Remove sublinhado */
+  display: block;
+  /* Faz com que os links ocupem toda a largura disponível */
+  margin: 10px 0;
+  /* Espaçamento entre os links */
+  position: relative;
+  /* Para posicionar a linha de destaque */
+  transition: color 0.3s ease;
+  /* Transição suave de cor */
+}
+
+.side-menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #007bff;
+  /* Cor azul da linha */
+  transition: width 0.3s ease;
+  /* Transição suave da largura */
+}
+
+.side-menu a:hover {
+  color: #ffffff;
+  /* Cor dos links ao passar o mouse */
+}
+
+.side-menu a:hover::after {
+  width: 100%;
+  /* Exibe a linha embaixo do link no hover */
+}
+
+.side-menu.active {
+  right: 0;
+  /* Mostra o menu quando ativo */
+}
+
+@media (max-width: 960px) {
+  .hamburger {
+    display: block;
+    /* Mostra o botão do menu hamburguer em telas menores */
+  }
+
+  .nav-links {
+    display: none;
+    /* Esconde o menu de navegação original */
+  }
+}
+
+.close-btn {
+  cursor: pointer;
+  font-size: 30px;
+  color: #c7d5e0;
+  text-align: right;
+  padding: 20px;
+}
