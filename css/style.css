@@ -9,7 +9,7 @@
 
 body {
   background-color: #0d1117;
-  /*background-image: url('/img/background.png');*/
+  /*background-image: url('../img/background.png');*/
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
