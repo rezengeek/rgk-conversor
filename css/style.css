@@ -29,11 +29,10 @@ body {
 .navbar {
   background-color: #010409;
   height: 100px;
-  /* Greater height */
   display: flex;
   align-items: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-  border-bottom: 2px dotted #214265;
+  border-bottom: 2px dotted #123a89;
 }
 
 .nav-content {
@@ -69,6 +68,9 @@ body {
   font-size: 16px;
   position: relative;
   transition: color 0.3s ease;
+  padding: 10px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
 }
 
 .nav-links a::after {
@@ -79,23 +81,25 @@ body {
   width: 0;
   height: 2px;
   background-color: #007bff;
-  /* Cor azul da linha */
   transition: width 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #ffffff;
-  /* Cor azul do texto no hover para outros links */
+  background-color: #912AA9;
+  border-radius: 6px;
+  padding: 10px;
 }
 
+/* Estilo para o link ativo do navbar */
 .nav-links a.active {
-  color: #007bff;
-  /* Cor azul do texto para o item ativo */
-}
-
-.nav-links a.active::after {
-  width: 100%;
-  /* Linha embaixo do item ativo */
+  background-color: #4E3E9F;
+  /* Fundo mais escuro para o ativo */
+  border-radius: 6px;
+  /* Bordas levemente arredondadas */
+  padding: 10px;
+  /* Espaçamento interno igual ao hover */
+  color: #ffffff;
+  /* Cor de texto para o ativo */
 }
 
 .engine-title h1 {
@@ -113,9 +117,9 @@ body {
   margin: 40px auto;
   margin-bottom: 120px;
   padding: 20px;
-  background-color: #101217;
+  background-color: #00080F;
   border-radius: 60px;
-  border: 2px dotted #214265;
+  border: 2px dotted #123a89;
   /* Borda fina azul ao redor do container */
 }
 
@@ -215,13 +219,22 @@ button {
   width: 100%;
   max-width: 30%;
   padding: 10px;
-  background-color: #1994FF;
+  background: linear-gradient(90deg, #004977, #A62CB6);
+  /* Degradê do botão */
   color: #ffffff;
   border: none;
   border-radius: 20px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s;
+  /* Transição suave */
   font-weight: bold;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #09284C, #4E3E9F);
+  /* Gradiente mais escuro ao passar o mouse */
+  transform: scale(1.03);
+  /* Efeito de aumentar um pouco o botão */
 }
 
 form label,
@@ -232,9 +245,6 @@ form input {
   /* Limita a largura dos inputs */
 }
 
-button:hover {
-  background-color: #00668c;
-}
 
 .error {
   color: white;
@@ -265,12 +275,13 @@ button:hover {
 }
 
 .footer {
-  background-color: #101217;
+  background-color: #000204;
   padding: 50px 20px;
   /* Large footer */
   color: #c7d5e0;
   text-align: center;
-  border-top: 2px solid #214265;
+  border-top: 2px dotted #123a89;
+
 }
 
 .footer li {
@@ -298,9 +309,7 @@ button:hover {
 }
 
 .copy a {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: bold;
+  color: #737377;
 }
 
 .copy strong {
@@ -391,7 +400,7 @@ button:hover {
   bottom: -2px;
   width: 0;
   height: 2px;
-  background-color: #007bff;
+  background-color: #912AA9;
   /* Cor azul da linha */
   transition: width 0.3s ease;
   /* Transição suave da largura */

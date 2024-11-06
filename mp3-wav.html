@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ferramenta Online de Conversão de Áudio</title>
+  <title>RGK- Ferramenta para Converter MP3 para WAV Online</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css">
   <script src="https://cdn.rawgit.com/Volumetric/AudioEncoder.js/master/audio-encoder.js"></script>
@@ -48,80 +48,80 @@
 
   <main>
 
-    <div class="engine-title">
-      <h1>Conversor Online de MP3 para WAV<p></p>e WAV para MP3</p>
-      </h1>
-    </div>
-
-    <div class="container">
-      <div class="profile">
-        <img src="img/profile-photo.jpg" alt="Foto do perfil">
-        <div class="profile-info">
-          <a href="https://github.com/rezengeek" target="_blank">
-            <h3>Oscar Rezende</h3>
-          </a>
-          <p>Programador</p>
-          <p>26.10.2024 20:00</p>
-        </div>
+    <div class="main-content">
+      <div class="engine-title">
+        <h1>Conversor Online de MP3 para WAV<p></p>e WAV para MP3</p>
+        </h1>
       </div>
 
-      <div class="text-container">
-        <p>
-          Eu estava 'tentando' converter alguns áudios de MP3 para WAV <b>(para uma aplicação em específico)</b>.
-          Normalmente,
-          uso sites de conversão <b>(mas só tem sites problemáticos por aí)</b>, a segurança deixa a desejar, além
-          de
-          muitos anúncios, alguns sites baixam arquivos indesejados <b>(instaladores, e até vírus)</b>. Tudo isso
-          resulta
-          em uma dificuldade imensa para converter e baixar um arquivo.
-          Por isso,
-          decidi criar minha própria ferramenta. É possível configurar e converter rapidamente, sem complicações! :)
-        </p>
-        <div class="limit">
-          <p><strong>Limites: 5 áudios, de no máximo 30MB cada.</strong> </p>
+      <div class="container">
+        <div class="profile">
+          <img src="img/profile-photo.jpg" alt="Foto do perfil">
+          <div class="profile-info">
+            <a href="https://github.com/rezengeek" target="_blank">
+              <h3>Oscar Rezende</h3>
+            </a>
+            <p>Programador</p>
+            <p>26.10.2024 20:00</p>
+          </div>
         </div>
 
-        <form id="audio-form">
-          <label for="input-format">Formato de Entrada</label>
-          <select id="input-format" name="input-format">
-            <option value="mp3">MP3</option>
-            <option value="wav">WAV</option>
-          </select>
+        <div class="text-container">
+          <p>
+            Eu estava 'tentando' converter alguns áudios de MP3 para WAV <b>(para uma aplicação em específico)</b>.
+            Normalmente,
+            uso sites de conversão <b>(mas só tem sites problemáticos por aí)</b>, a segurança deixa a desejar, além
+            de
+            muitos anúncios, alguns sites baixam arquivos indesejados <b>(instaladores, e até vírus)</b>. Tudo isso
+            resulta
+            em uma dificuldade imensa para converter e baixar um arquivo.
+            Por isso,
+            decidi criar minha própria ferramenta. É possível configurar e converter rapidamente, sem complicações! :)
+          </p>
+          <div class="limit">
+            <p><strong>Limites: 5 áudios, de no máximo 30MB cada.</strong> </p>
+          </div>
 
-          <label for="output-format">Formato de Saída</label>
-          <select id="output-format" name="output-format">
-            <option value="wav">WAV</option>
-            <option value="mp3">MP3</option>
-          </select>
+          <form id="audio-form">
+            <label for="input-format">Formato de Entrada</label>
+            <select id="input-format" name="input-format">
+              <option value="mp3">MP3</option>
+              <option value="wav">WAV</option>
+            </select>
 
-          <label for="quality">Qualidade</label>
-          <select id="quality" name="quality">
-            <option value="8">8 bits</option>
-            <option value="16">16 bits</option>
-            <option value="24">24 bits</option>
-            <option value="32" selected>32 bits</option>
-          </select>
+            <label for="output-format">Formato de Saída</label>
+            <select id="output-format" name="output-format">
+              <option value="wav">WAV</option>
+              <option value="mp3">MP3</option>
+            </select>
 
-          <label for="file">Áudios</label>
-          <input type="file" id="file" name="file" multiple accept=".mp3,.wav">
+            <label for="quality">Qualidade</label>
+            <select id="quality" name="quality">
+              <option value="8">8 bits</option>
+              <option value="16">16 bits</option>
+              <option value="24">24 bits</option>
+              <option value="32" selected>32 bits</option>
+            </select>
 
-          <button type="submit">Converter</button>
-        </form>
+            <label for="file">Áudios</label>
+            <input type="file" id="file" name="file" multiple accept=".mp3,.wav">
+
+            <button type="submit">Converter ➥</button>
+          </form>
 
 
-        <div id="result" style="margin-top: 20px;"></div>
-        <a id="downloadLink" style="display: none;">Download audios-convertidos.zip</a>
-        <div id="loading" class="loading">
-          <div class="spinner"></div> Carregando...
+          <div id="result" style="margin-top: 20px;"></div>
+          <a id="downloadLink" style="display: none;">Download audios-convertidos.zip</a>
+          <div id="loading" class="loading">
+            <div class="spinner"></div> Carregando...
+          </div>
         </div>
       </div>
     </div>
   </main>
 
   <footer class="footer">
-    <p>Gostou da ferramenta? Tem alguma sugestão? <a href="https://www.linkedin.com/in/rezengeek/"
-        target="_blank">Contate-me!</a></p>
-    <br>
+
     <p>É gratuito e fácil. Converta seus arquivos sem anúncios, sem vírus, e sem baixar arquivos indesejados.</p><br>
     <p><a href="#">Saber mais
         sobre esta ferramenta</a></p><br><br>
@@ -135,7 +135,7 @@
     <div class="copy">
       <p>Desenvolvido <i class="fas fa-code"></i> por <a href="https://github.com/rezengeek" class="no-underline"
           target="_blank"><img src="img/logo2.png" />
-          oscar<strong>Rezende</strong></a></p>
+          oscarRezende</a></p>
     </div>
   </footer>
 
