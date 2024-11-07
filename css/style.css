@@ -9,6 +9,13 @@
 
 body {
   background-color: #0d1117;
+  background-image: url('../img/bgdark.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: calc(100vh - 120px);
+  padding-top: 60px;
+  padding-bottom: 60px;
   color: #c7d5e0;
   font-family: Arial, sans-serif;
   margin: 0;
@@ -16,18 +23,18 @@ body {
 }
 
 /* Ajuste para o contêiner de conteúdo com a imagem de fundo */
-.main-content {
-  background-image: url('../img/bg.png');
+/*.main-content {
+  background-image: url('../img/bgdark.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   min-height: calc(100vh - 120px);
   padding-top: 60px;
   padding-bottom: 60px;
-}
+}*/
 
 .navbar {
-  background-color: #010409;
+  background-color: rgba(0, 8, 15, 0.5);
   height: 100px;
   display: flex;
   align-items: center;
@@ -104,8 +111,8 @@ body {
 
 .engine-title h1 {
   font-size: 48px;
-  margin-top: 60px;
-  margin-bottom: 60px;
+  margin-top: 200px;
+  margin-bottom: 100px;
   text-align: center;
   color: #ffffff;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -117,7 +124,7 @@ body {
   margin: 40px auto;
   margin-bottom: 120px;
   padding: 20px;
-  background-color: #00080F;
+  background-color: rgba(0, 8, 15, 0.5);
   border-radius: 60px;
   border: 2px dotted #123a89;
   /* Borda fina azul ao redor do container */
@@ -199,8 +206,9 @@ form input {
   width: 80%;
   padding: 10px;
   margin-bottom: 10px;
-  background-color: #32353C;
-  border: 1px solid #132941;
+  background-color: rgba(0, 8, 15, 0.5);
+  border: 1px solid #123a89;
+  ;
   color: #ffffff;
   border-radius: 20px;
   transition: background-color 0.3s ease, border-color 0.3s ease;
@@ -210,7 +218,7 @@ form select:focus,
 form input:focus {
   border-color: #007bff;
   /* Cor de foco */
-  background-color: #32353C;
+  background-color: rgba(0, 8, 15, 0.5);
   border-radius: 20px;
   /* Muda a cor de fundo para um tom mais claro */
 }
@@ -218,8 +226,9 @@ form input:focus {
 button {
   width: 100%;
   max-width: 30%;
+  margin-top: 10px;
   padding: 10px;
-  background: linear-gradient(90deg, #004977, #A62CB6);
+  background: linear-gradient(100deg, #09284C, #fd3ec7);
   /* Degradê do botão */
   color: #ffffff;
   border: none;
@@ -231,7 +240,7 @@ button {
 }
 
 button:hover {
-  background: linear-gradient(90deg, #09284C, #4E3E9F);
+  background: linear-gradient(90deg, #06192f, #a1267e);
   /* Gradiente mais escuro ao passar o mouse */
   transform: scale(1.03);
   /* Efeito de aumentar um pouco o botão */
@@ -274,8 +283,9 @@ form input {
   }
 }
 
+
 .footer {
-  background-color: #000204;
+  background-color: rgba(0, 8, 15, 0.7);
   padding: 50px 20px;
   /* Large footer */
   color: #c7d5e0;
@@ -310,10 +320,6 @@ form input {
 
 .copy a {
   color: #737377;
-}
-
-.copy strong {
-  color: #1994FF;
 }
 
 .copy img {
