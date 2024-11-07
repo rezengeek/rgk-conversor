@@ -4,15 +4,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RGK - Ferramenta Online para Conversão de Áudios</title>
+  <title>RGK - Conversor Online</title>
+  <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css">
   <script src="https://cdn.rawgit.com/Volumetric/AudioEncoder.js/master/audio-encoder.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lamejs/1.2.0/lame.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-  <script src="js/script.js"></script>
-
+  <!-- (defer) Carregar o script de vue-cards.js após o DOM estar carregado -->
+  <script src="js/vue-cards.js" defer></script>
 </head>
+
+
+
+
 
 <body>
   <header>
@@ -22,7 +28,9 @@
       <i class="fas fa-bars"></i>
     </div>
 
-    <!-- Menu Lateral -->
+
+
+    <!-- Menu Lateral mobile -->
     <div class="side-menu" id="side-menu">
       <div class="close-btn" onclick="toggleMenu()">
         <i class="fas fa-times"></i>
@@ -34,6 +42,9 @@
       </ul>
     </div>
 
+
+
+    <!-- Navbar desktop -->
     <nav class="navbar">
       <div class="nav-content">
         <img src="img/logo.png" alt="RezenGeek Logo" class="logo">
@@ -46,84 +57,42 @@
     </nav>
   </header>
 
+
+
+  <!-- Principal -->
   <main>
 
     <div class="main-content">
       <div class="engine-title">
-        <h1>Conversor Online de MP3 para WAV<p></p>e WAV para MP3</p>
-        </h1>
+        <h1>RGK CONVERSOR ONLINE</h1>
       </div>
 
-      <div class="container">
-        <div class="profile">
-          <img src="img/profile-photo.jpg" alt="Foto do perfil">
-          <div class="profile-info">
-            <a href="https://github.com/rezengeek" target="_blank">
-              <h3>Oscar Rezende</h3>
-            </a>
-            <p>Programador</p>
-            <p>26.10.2024 20:00</p>
-          </div>
-        </div>
+      <!-- Cards -->
+      <div id="app">
+        <div class="cards-container">
+          <h2 class="cards-title">Explore nossos recursos</h2>
 
-        <div class="text-container">
-          <p>
-            Eu estava 'tentando' converter alguns áudios de MP3 para WAV <b>(para uma aplicação em específico)</b>.
-            Normalmente,
-            uso sites de conversão <b>(mas só tem sites problemáticos por aí)</b>, a segurança deixa a desejar, além
-            de
-            muitos anúncios, alguns sites baixam arquivos indesejados <b>(instaladores, e até vírus)</b>. Tudo isso
-            resulta
-            em uma dificuldade imensa para converter e baixar um arquivo.
-            Por isso,
-            decidi criar minha própria ferramenta. É possível configurar e converter rapidamente, sem complicações! :)
-          </p>
-          <div class="limit">
-            <p><strong>Limites: 5 áudios, de no máximo 30MB cada.</strong> </p>
-          </div>
-
-          <form id="audio-form">
-            <label for="input-format">Formato de Entrada</label>
-            <select id="input-format" name="input-format">
-              <option value="mp3">MP3</option>
-              <option value="wav">WAV</option>
-            </select>
-
-            <label for="output-format">Formato de Saída</label>
-            <select id="output-format" name="output-format">
-              <option value="wav">WAV</option>
-              <option value="mp3">MP3</option>
-            </select>
-
-            <label for="quality">Qualidade</label>
-            <select id="quality" name="quality">
-              <option value="8">8 bits</option>
-              <option value="16">16 bits</option>
-              <option value="24">24 bits</option>
-              <option value="32" selected>32 bits</option>
-            </select>
-
-            <label for="file">Áudios</label>
-            <input type="file" id="file" name="file" multiple accept=".mp3,.wav">
-            <button type="submit">Converter ➥</button>
-          </form>
-
-
-          <div id="result" style="margin-top: 20px;"></div>
-          <a id="downloadLink" style="display: none;">Download audios-convertidos.zip</a>
-          <div id="loading" class="loading">
-            <div class="spinner"></div> Carregando...
+          <div class="card-wrapper">
+            <div v-for="card in cards" :key="card.id" class="card">
+              <a :href="card.link" target="_blank" class="card-link">
+                <div class="card-bg" :style="{ backgroundImage: 'url(' + card.image + ')' }"></div>
+                <div class="card-info">
+                  <h1>{{ card.title }}</h1>
+                  <p>{{ card.description }}</p>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
   </main>
 
-  <footer class="footer">
 
+
+  <!-- Footer -->
+  <footer class="footer-index">
     <p>É gratuito e fácil. Converta seus arquivos sem anúncios, sem vírus, e sem baixar arquivos indesejados.</p><br>
-    <p><a href="#">Saber mais
-        sobre esta ferramenta</a></p><br><br>
+    <p><a href="#">Saber mais sobre esta ferramenta</a></p><br><br>
     <ul class="footer-links">
       <li><a href="https://github.com/rezengeek/rgk-conversor" target="_blank">Github</a></li>
       <li><a
@@ -133,10 +102,10 @@
     </ul><br>
     <div class="copy">
       <p>Desenvolvido <i class="fas fa-code"></i> por <a href="https://github.com/rezengeek" class="no-underline"
-          target="_blank"><img src="img/logo2.png" />
-          oscarRezende</a></p>
+          target="_blank"><img src="img/logo2.png" /> oscarRezende</a></p>
     </div>
   </footer>
+
 
 </body>
 

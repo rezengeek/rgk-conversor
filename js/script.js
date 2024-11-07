@@ -1,4 +1,4 @@
-// RGK CONVERSOR ONLINE - ONLINE CONVERTER SCRIPT
+// RGK CONVERSOR ONLINE - ONLINE CONVERTER MP3 TO WAV SCRIPT
 
 function toggleMenu() {
   const menu = document.getElementById('side-menu');
