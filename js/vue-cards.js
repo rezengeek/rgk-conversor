@@ -24,14 +24,14 @@ new Vue({
           title: 'PDF',
           description: 'Converta arquivos diversos para PDF, e vice-versa',
           image: 'img/bg.png',
-          link: 'pdf-converter.html'  
+          link: '#'  
         },
         {
           id: 4,
-          title: 'Lakes',
+          title: 'Lorem Ipsum',
           description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
           image: 'img/bgdark.png',
-          link: 'lakes.html'  
+          link: '#'  
         }
       ]
     };
